@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper d-flex">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="profile text-center mb-5">
+                <!-- <img src="https://via.placeholder.com/100" alt="Profile Picture" class="rounded-circle mb-2">
+                <h3>John Doe</h3>
+                <p>Web Developer</p> -->
+                <p></p>
+                <h3>Ini Logo</h3>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-home"></i>
+                        <span class="d-none d-md-inline">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-user"></i>
+                        <span class="d-none d-md-inline">About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-cogs"></i>
+                        <span class="d-none d-md-inline">Services</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-envelope"></i>
+                        <span class="d-none d-md-inline">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div id="main-content" class="flex-grow-1">
+            <!-- Navbar -->
+            <nav id="navbar" class="navbar navbar-light bg-light">
+                <button id="menu-toggle" class="btn btn-link"><i class="fas fa-bars"></i></button>
+                <h2 class="ml-3 mb-0">Dashboard</h2>
+                <div class="ml-auto">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="profileDropdown"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://via.placeholder.com/40" alt="Profile Picture" class="rounded-circle mr-2">
+                            John Doe
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Content Section -->
+            <div class="container mt-4">
+                <h1>Welcome to the Dashboard</h1>
+                <p>This is a simple dashboard page with a sliding sidebar and navbar.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button Settings di bagian kanan -->
+    <button id="settings-btn" class="btn btn-primary">
+        <i class="fas fa-cog"></i>
+    </button>
+
+    <!-- Color Picker langsung pada button -->
+    <input type="color" id="color-picker" style="display: none;">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Menangani overflow saat sidebar disembunyikan */
+}
+
+#sidebar {
+    width: 250px;
+    transition: width 0.3s ease, display 0.3s ease;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #2596be;
+    padding: 1rem;
+}
+
+#sidebar.hidden {
+    display: none; /* Menyembunyikan sidebar sepenuhnya */
+}
+
+#sidebar .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#sidebar.hidden .profile {
+    display: none; /* Sembunyikan profile ketika sidebar tersembunyi */
+}
+
+#sidebar .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px; /* Padding vertikal yang sesuai */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Pastikan link mengambil lebar penuh dari sidebar */
+    text-align: left; /* Teks rata kiri */
+    color: white; /* Warna ikon dan teks */
+    margin-bottom: 0.5rem; /* Spasi antara menu */
+    box-sizing: border-box; /* Pastikan padding tidak mempengaruhi lebar */
+}
+
+#sidebar .nav-link i {
+    font-size: 24px; /* Ukuran ikon */
+    margin-right: 15px; /* Jarak antara ikon dan teks */
+}
+
+#sidebar .nav-link span {
+    display: inline;
+}
+
+#sidebar.hidden .nav-link span {
+    display: none; /* Sembunyikan teks saat sidebar tersembunyi */
+}
+
+#sidebar.hidden .nav-link {
+    justify-content: center; /* Pastikan ikon berada di tengah secara horizontal */
+}
+
+#sidebar .nav-link:hover {
+    background-color: #1b7493;
+    color: #fff;
+}
+
+#main-content {
+    flex-grow: 1;
+    transition: margin-left 0.3s ease;
+    padding: 15px;
+}
+
+#main-content.hidden {
+    margin-left: 0; /* Sesuaikan margin saat sidebar disembunyikan */
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #1d0202;
+}
+
+/* Navbar dan Dropdown */
+#navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa; /* Warna latar belakang navbar */
+}
+
+/* Profil Dropdown Button */
+#profileDropdown {
+    background-color: #f8f9fa; /* Warna latar belakang tombol dropdown sama dengan navbar */
+    color: #333; /* Warna teks pada tombol dropdown */
+    border: none; /* Hapus border default */
+    padding: 10px 15px; /* Padding tombol dropdown */
+    border-radius: 0.25rem; /* Radius sudut tombol dropdown */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background-color: #f8f9fa; /* Warna latar belakang dropdown-menu menyatu dengan navbar */
+    border: none; /* Hapus border default */
+    border-radius: 0.25rem; /* Radius sudut dropdown-menu */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan untuk dropdown-menu */
+    min-width: 150px; /* Lebar minimum dropdown-menu */
+}
+
+.dropdown-menu .dropdown-item {
+    color: #333; /* Warna teks item dropdown */
+    padding: 10px 20px; /* Padding item dropdown */
+    border: none; /* Hapus border default dari item dropdown */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #e9ecef; /* Warna latar belakang saat hover */
+}
+
+
+#settings-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #2596be;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#settings-btn:hover {
+    background-color: #1b7493;
+}
+
+#color-picker {
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+
+
+
+
+/* Custom CSS for dropdown if needed */
+.dropdown-menu {
+    min-width: 150px; /* Adjust the width of the dropdown */
+}
+
+
+
+:root {
+    --sidebar-color: #1d0202; /* Default color */
+    --button-color: #1d0202; /* Default color */
+}
+
+#sidebar {
+    background-color: var(--sidebar-color);
+}
+
+#settings-btn {
+    background-color: var(--button-color);
+}
